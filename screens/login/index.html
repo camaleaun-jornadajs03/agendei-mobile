@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --white: #fff;
+      --gray-100: #f1f5f4;
+      --gray-200: #e5e5e5;
+      --gray-500: #a0a0a0;
+      --blue: #0d6efd;
+      --primary: #0d6efd;
+      --body-bg: var(--white);
+      --body-color: var(--gray-500);
+    }
+
+    html {
+      font-size: .214293333vw;
+    }
+
+    @media (min-width: 432px) {
+      html {
+        font-size: .231481481vw;
+      }
+    }
+
+    @media (min-width: 590px) {
+      html {
+        font-size: .254237288vw;
+      }
+    }
+
+    @media (min-width: 590px) {
+      html {
+        font-size: .254237288vw;
+      }
+    }
+
+    @media (min-width: 768px) {
+      html {
+        font-size: 1.37288px;
+      }
+    }
+
+    body {
+      font-family: Roboto, system-ui, -apple-system, sans-serif;
+      background-color: var(--body-bg);
+      color: var(--body-color);
+      height: 100vh;
+      font-size: 19.9104rem;
+      line-height: 1.4375;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: var(--body-bg);
+    }
+
+    input[type=email],
+    input[type=password] {
+      background-color: var(--gray-100); 
+    }
+
+    input[type=email],
+    input[type=password],
+    button {
+      --py: 16.177rem;
+      --px: 17.4216rem;
+      font-size: 19.9104rem;
+      line-height: 1.1905;
+      border: 0;
+      padding: var(--py) var(--px);
+      border-radius: 4.9776rem;
+    }
+
+    input + button {
+      margin-top: 2.4888rem;
+    }
+
+    body > .view {
+      height: 100vh;
+      justify-content: space-between;
+    }
+
+    .view {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .view > .view {
+      --px: 59.731rem;
+      padding-right: var(--px);
+      padding-left: var(--px);
+    }
+
+    .header {
+      --py: 63.464rem;
+      align-items: center;
+      padding-top: var(--py);
+      padding-bottom: var(--py);
+      min-height: 166.7497rem;
+      justify-content: center;
+    }
+
+    .header img {
+      width: 172.99rem;
+      height: auto;
+    }
+
+    form {
+      gap: 18.666003rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .footer {
+      --py: 53.509rem;
+      padding-top: var(--py);
+      padding-bottom: var(--py);
+      min-height: 135.63962rem;
+    }
+  </style>
+</head>
+<body>
+
+<main class="view">
+  <header class="view header">
+    <img src="../../src/assets/logo.png" alt="Agendei">
+  </header>
+  <form action="" class="view">
+    <input type="email" placeholder="E-mail">
+    <input type="password" placeholder="Senha">
+    <button type="submit">Acessar</button>
+  </form>
+  <footer class="footer view">
+    <p>Não tenho conta. <a href="#">Criar conta agora.</a></p>
+  </footer>
+</main>
+
+</body>
+</html>
