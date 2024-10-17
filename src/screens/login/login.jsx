@@ -1,4 +1,5 @@
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import Image from "../../components/image/image.jsx";
 import icon from "../../constants/icon.js";
 import { styles } from "./login.style.js";
 import Button from "../../components/button/button.jsx";
