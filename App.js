@@ -1,5 +1,4 @@
-import Login from "./src/screens/login/login.jsx";
-import Account from "./src/screens/account/account.jsx";
+import { Login, Account } from "@agendei/screens";
 
 function App() {
 

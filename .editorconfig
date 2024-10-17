@@ -21,3 +21,11 @@ end_of_line = lf
 
 [{package.json,package-lock.json}]
 end_of_line = lf
+
+[{.editorconfig,metro.config.js}]
+insert_final_newline = true
+
+[{metro.config.js,babel.config.js,src/**/index.js}]
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true

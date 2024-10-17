@@ -1,78 +1,30 @@
-import React from 'react';
 import { Image as RNImage } from 'react-native';
 
 const Image = ({ source, width, height, style, ...props }) => {
   const isSvg = typeof source === 'function';
 
-  width = width || style?.width;
-  height = height || style?.height
-  
+  const resolvedWidth = width || style?.width;
+  const resolvedHeight = height || style?.height;
+
+  const imageStyle = [{ width: resolvedWidth, height: resolvedHeight }, style];
+
   if (isSvg) {
     const SvgImage = source;
-    if (width && height) {
-      return (
-        <SvgImage 
-          width={width}
-          height={height}
-          {...props} 
-        />
-      );
-    } else if(width && !height) {
-      return (
-        <SvgImage 
-          width={width}
-          {...props} 
-        />
-      );
-    } else if(!width && height) {
-      return (
-        <SvgImage
-          height={height}
-          {...props} 
-        />
-      );
-    } else {
-      return (
-        <SvgImage
-          {...props} 
-        />
-      );
-    }
+    const svgProps = {
+      ...(resolvedWidth && { width: resolvedWidth }),
+      ...(resolvedHeight && { height: resolvedHeight }),
+      ...props
+    };
+    return <SvgImage {...svgProps} />;
   }
 
-  if (width && height) {
-    return (
-      <RNImage 
-        source={source}
-        style={[{ width, height }, style]}
-        {...props} 
-      />
-    );
-  } else if(width && !height) {
-    return (
-      <RNImage 
-        source={source}
-        style={[{ width }, style]} 
-        {...props} 
-      />
-    );
-  } else if(!width && height) {
-    return (
-      <RNImage
-        source={source}
-        style={[{ height }, style]} 
-        {...props} 
-      />
-    );
-  } else {
-    return (
-      <RNImage
-        source={source}
-        style={style}
-        {...props} 
-      />
-    );
-  }
+  return (
+    <RNImage
+      source={source}
+      style={imageStyle}
+      {...props}
+    />
+  );
 };
 
 export default Image;

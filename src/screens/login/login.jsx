@@ -1,8 +1,7 @@
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import Image from "../../components/image/image.jsx";
-import icon from "../../constants/icon.js";
+import { Image, Button } from "@agendei/components";
+import { icon } from "@agendei/constants";
 import { styles } from "./login.style.js";
-import Button from "../../components/button/button.jsx";
 
 function Login() {
     return <View style={styles.container}>
